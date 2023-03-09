@@ -1,7 +1,11 @@
 const router= require('express').Router()
-const {getAllFloors}=require('../controllers/FloorController')
+const {getAllFloors,createFloors,updateFloor,removeFloor,getOneFloor}=require('../controllers/FloorController')
 
-router.get('/allFloors',getAllFloors)
+router.get('/getAll',getAllFloors)
+router.post('/create',createFloors)
+router.get('/getOne/:id',getOneFloor)
+router.put('/update/:id',updateFloor)
+router.delete('/remove/:id',removeFloor)
 
 
 
